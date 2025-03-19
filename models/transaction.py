@@ -10,6 +10,7 @@ class Transaction(db.Model):
     type = db.Column(db.String(120), nullable=False)
     amount = db.Column(db.Numeric(10, 2), nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey('category.pk_category'), nullable=False)
+    user_id = db.Column(db.String(255), nullable=False)
     created_at = db.Column(db.DateTime, default=func.now())
 
     category = relationship('Category')

@@ -4,6 +4,7 @@ from flask_cors import CORS
 from flasgger import Swagger
 from sqlalchemy import event
 from sqlalchemy.engine import Engine
+from dotenv import load_dotenv
 
 
 db = SQLAlchemy()
@@ -15,6 +16,9 @@ def _set_sqlite_pragma(dbapi_connection, connection_record):
     cursor.close()
 
 def create_app():
+    # Carregar variáveis de ambiente do arquivo .env
+    load_dotenv()
+
     app = Flask(__name__)
     app.config.from_object('app.config.Config')
 
@@ -26,7 +30,16 @@ def create_app():
         _set_sqlite_pragma(dbapi_connection, connection_record)
 
     # Initialize Swagger (Flasgger)
-    Swagger(app)
+    swagger = Swagger(app)
+
+    swagger.config['securityDefinitions'] = {
+    'BearerAuth': {
+        'type': 'apiKey',
+        'in': 'header',
+        'name': 'Authorization',
+        'description': 'O token JWT deve ser enviado no cabeçalho Authorization com o prefixo "Bearer "'
+    }
+}
 
     from app.routes import api
     app.register_blueprint(api)

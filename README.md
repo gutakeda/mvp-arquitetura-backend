@@ -10,12 +10,10 @@ YourExpenses Backend é a parte do servidor do aplicativo YourExpenses, respons�
 ## Requisitos
 
 - Python 3.x
-- Virtualenv
+- Docker
 
 ## Instruções de Execução
 
-### Mac/Linux
-
 1. Clone este repositório:
 
    ```bash
@@ -23,49 +21,23 @@ YourExpenses Backend é a parte do servidor do aplicativo YourExpenses, respons�
    cd mvp-fullstack-backend
    ```
 
-2. Crie e ative um ambiente virtual:
+2. Crie a imagem local
 
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate
+   docker build -t mvp-arquitetura-backend .
    ```
 
-3. Instale as dependências:
-
+3. Crie o arquivo .env na raiz do projeto e adicione as seguintes variáveis de ambiente:
    ```bash
-   pip install -r requirements.txt
+   API_AUDIENCE=...
+   AUTH0_DOMAIN=...
+   ALGORITHMS=RS256
    ```
 
-4. Execute a aplicação:
-   ```bash
-   python run.py
-   ```
-
-### Windows
-
-1. Clone este repositório:
+4. Rode a imagem
 
    ```bash
-   git clone https://github.com/gutakeda/mvp-fullstack-backend.git
-   cd mvp-fullstack-backend
-   ```
-
-2. Crie e ative um ambiente virtual:
-
-   ```bash
-   python -m venv venv
-   .\venv\Scripts\activate
-   ```
-
-3. Instale as dependências:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Execute a aplicação:
-   ```bash
-   python run.py
+   docker run --env-file .env -p 5000:5000 mvp-arquitetura-backend
    ```
 
 ## Swagger
