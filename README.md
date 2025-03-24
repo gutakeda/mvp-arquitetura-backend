@@ -20,8 +20,8 @@ YourExpenses Backend é a parte do servidor do aplicativo YourExpenses, respons�
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/gutakeda/mvp-fullstack-backend.git
-   cd mvp-fullstack-backend
+   git clone https://github.com/gutakeda/mvp-arquitetura-backend.git
+   cd mvp-arquitetura-backend
    ```
 
 2. Crie a imagem local
