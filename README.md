@@ -11,8 +11,6 @@ YourExpenses Backend é a parte do servidor do aplicativo YourExpenses, respons�
    - A documentação completa das APIs pode ser acessada via Swagger em: [http://localhost:5000/apidocs/#/](http://localhost:5000/apidocs/#/)
 
 ## Requisitos
-
-- Python 3.x
 - Docker
 
 ## Instruções de Execução
