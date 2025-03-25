@@ -15,6 +15,7 @@ YourExpenses Backend é a parte do servidor do aplicativo YourExpenses, respons�
 ### Requisitos
 - Docker
 
+### Passo a passo
 1. Clone este repositório:
 
    ```bash
