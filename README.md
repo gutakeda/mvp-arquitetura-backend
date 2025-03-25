@@ -2,7 +2,7 @@
 
 YourExpenses Backend é a parte do servidor do aplicativo YourExpenses, responsável por fornecer as APIs necessárias para gerenciar transações e categorias, bem como para calcular e fornecer dados para as tabelas e dashboard.
 
-# Diagrama de Arquitetura
+## Diagrama de Arquitetura
 ![Diagrama de Arquitetura](./mvp-arquitetura.drawio.png)
 
 ## Funcionalidades
