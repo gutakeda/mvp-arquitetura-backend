@@ -16,8 +16,5 @@ COPY . .
 # Expõe a porta que o app usará
 EXPOSE 5000
 
-# Define a variável de ambiente FLASK_APP para garantir que o Flask saiba qual arquivo rodar
-ENV FLASK_APP=run.py
-
-# Comando para rodar a aplicação Flask
-CMD ["flask", "run", "--host=0.0.0.0"]
+# Comando para rodar a aplicação
+CMD ["python", "run.py"]
