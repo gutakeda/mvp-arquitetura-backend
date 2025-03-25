@@ -10,10 +10,10 @@ YourExpenses Backend é a parte do servidor do aplicativo YourExpenses, respons�
 1. **Documentação da API**:
    - A documentação completa das APIs pode ser acessada via Swagger em: [http://localhost:5000/apidocs/#/](http://localhost:5000/apidocs/#/)
 
-## Requisitos
-- Docker
 
 ## Instruções de Execução
+### Requisitos
+- Docker
 
 1. Clone este repositório:
 
