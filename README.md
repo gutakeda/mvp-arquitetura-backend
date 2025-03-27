@@ -23,17 +23,17 @@ YourExpenses Backend é a parte do servidor do aplicativo YourExpenses, respons�
    cd mvp-arquitetura-backend
    ```
 
-2. Crie a imagem local
-
-   ```bash
-   docker build -t mvp-arquitetura-backend .
-   ```
-
-3. Crie o arquivo .env na raiz do projeto e adicione as seguintes variáveis de ambiente:
+2. Crie o arquivo .env na raiz do projeto e adicione as seguintes variáveis de ambiente:
    ```bash
    API_AUDIENCE=...
    AUTH0_DOMAIN=...
    ALGORITHMS=RS256
+   ```
+
+3. Crie a imagem local
+
+   ```bash
+   docker build -t mvp-arquitetura-backend .
    ```
 
 4. Rode a imagem
